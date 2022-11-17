@@ -16,7 +16,6 @@ reg rst_n;
 
 vendor #(8, 16) v0 (ticket,
                     one_output,
-                    ten_output,
                     dest,
                     count,
                     one_insert,

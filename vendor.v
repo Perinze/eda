@@ -4,7 +4,6 @@ module vendor # (
 ) (
   output ticket_pulse,
   output coin_one_out_pulse,
-  output coin_ten_out_pulse,
 
   input [DW-1:0] input_dest,
   input [DW-1:0] input_count,
@@ -23,7 +22,6 @@ module vendor # (
   wire [DW-1:0] output_ticket_count;
   wire [DW-1:0] change_price;
   wire [DW-1:0] change_one_cnt;
-  wire [DW-1:0] change_ten_cnt;
   wire done_oneshot;
 
   oneshot done_shooter (done_oneshot, done, clk);
@@ -44,17 +42,10 @@ module vendor # (
                             total_price,
                             checked_input_ticket_count);
 
-  assign change_one_cnt = change_price % 10;
-  assign change_ten_cnt = change_price / 10;
+  assign change_one_cnt = change_price;
 
   count_pulse #(DW) change_one_pulser (coin_one_out_pulse,
                                         change_one_cnt,
-                                        done_oneshot,
-                                        clk,
-                                        rst_n);
-
-  count_pulse #(DW) change_ten_pulser (coin_ten_out_pulse,
-                                        change_ten_cnt,
                                         done_oneshot,
                                         clk,
                                         rst_n);
