@@ -1,3 +1,6 @@
+/*
+ * output the same number of pulse as input as count
+ */
 module count_pulse # (
   parameter DW = 8
 ) (
