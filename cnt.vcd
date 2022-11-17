@@ -1,0 +1,179 @@
+$date
+	Thu Nov 17 12:07:25 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ms
+$end
+$scope module cnt_tb $end
+$var wire 1 ! shot $end
+$var wire 8 " cnt [7:0] $end
+$var wire 8 # c [7:0] $end
+$var reg 8 $ a [7:0] $end
+$var reg 8 % b [7:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' letsshot $end
+$var reg 1 ( rst_n $end
+$scope module c0 $end
+$var wire 1 & clk $end
+$var wire 8 ) nxt_cnt [7:0] $end
+$var wire 8 * qout [7:0] $end
+$var wire 1 ( rst_n $end
+$var wire 8 + cur_cnt [7:0] $end
+$scope module cnt_dffrs $end
+$var wire 1 & clk $end
+$var wire 8 , dnxt [7:0] $end
+$var wire 1 ( rst_n $end
+$var wire 8 - qout [7:0] $end
+$var reg 8 . qout_r [7:0] $end
+$scope begin DFFRS_PROC $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module o0 $end
+$var wire 1 & clk $end
+$var wire 1 / curr $end
+$var wire 1 ' in $end
+$var wire 1 ! out $end
+$var wire 1 0 prev $end
+$scope module oneshot_dffrs $end
+$var wire 1 / dnxt $end
+$var wire 1 & lden $end
+$var wire 1 0 qout $end
+$var reg 1 0 qout_r $end
+$scope begin LTCH_PROC $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x0
+0/
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+1(
+0'
+0&
+b1001 %
+b100 $
+b11111011 #
+bx "
+0!
+$end
+#500
+b0 "
+b0 *
+b0 +
+b0 -
+b0 .
+b0 )
+b0 ,
+00
+0(
+1&
+#1000
+1!
+b1 )
+b1 ,
+1/
+1'
+1(
+0&
+#1500
+b10 )
+b10 ,
+0!
+b1 "
+b1 *
+b1 +
+b1 -
+b1 .
+10
+1&
+#2000
+0&
+#2500
+b11 )
+b11 ,
+b10 "
+b10 *
+b10 +
+b10 -
+b10 .
+1&
+#3000
+0/
+0'
+0&
+#3500
+b100 )
+b100 ,
+b11 "
+b11 *
+b11 +
+b11 -
+b11 .
+00
+1&
+#4000
+0&
+#4500
+b101 )
+b101 ,
+b100 "
+b100 *
+b100 +
+b100 -
+b100 .
+1&
+#5000
+1!
+1/
+1'
+0&
+#5500
+b110 )
+b110 ,
+0!
+b101 "
+b101 *
+b101 +
+b101 -
+b101 .
+10
+1&
+#6000
+0&
+#6500
+b111 )
+b111 ,
+b110 "
+b110 *
+b110 +
+b110 -
+b110 .
+1&
+#7000
+0/
+0'
+0&
+#7500
+b1000 )
+b1000 ,
+b111 "
+b111 *
+b111 +
+b111 -
+b111 .
+00
+1&
+#8000
+0&
