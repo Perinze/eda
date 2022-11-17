@@ -6,6 +6,7 @@ module abs # (
 );
 
   wire neg;
+  wire [DW-1:0] abs;
 
   assign neg = in[DW-1] == 1'b1;
   assign abs =

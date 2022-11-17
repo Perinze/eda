@@ -16,6 +16,6 @@ module insert_counter # (
 
   assign qout = cur_cnt;
 
-  dffrs #(DW) cnt_dffrs (nxt_cnt, cur_cnt, clk, rst_n);
+  dffr #(DW) cnt_dffr (nxt_cnt, cur_cnt, clk, rst_n);
 
 endmodule
