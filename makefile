@@ -11,3 +11,9 @@ MODS = \
 
 tb: $(MODS)
 	iverilog -o tb $(MODS)
+
+vendor.vcd: tb
+	./tb
+
+wave: vendor.vcd
+	gtkwave vendor.vcd
