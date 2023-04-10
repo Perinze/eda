@@ -1,13 +1,12 @@
 module vendor # (
-  parameter DW = 8,
-  parameter MYID = 16
+  parameter DW = 8
 ) (
   output ticket_pulse,
   output coin_one_out_pulse,
 
+  input [DW-1:0] input_src,
   input [DW-1:0] input_dest,
   input [DW-1:0] input_count,
-  input coin_one_in_pulse,
   input coin_ten_in_pulse,
   input done,
   input clk,
@@ -15,7 +14,6 @@ module vendor # (
 );
 
   wire [DW-1:0] checked_input_ticket_count;
-  wire [DW-1:0] coin_one_cnt;
   wire [DW-1:0] coin_ten_cnt;
   wire [DW-1:0] total_insert;
   wire [DW-1:0] total_price;
@@ -26,15 +24,22 @@ module vendor # (
 
   oneshot done_shooter (done_oneshot, done, clk);
 
-  dest_selector #(DW, MYID) dest_device (total_price,
-                                          checked_input_ticket_count,
-                                          input_dest,
-                                          input_count);
+  dest_selector #(DW) dest_device (total_price,
+                                    checked_input_ticket_count,
+                                    input_src,
+                                    input_dest,
+                                    input_count);
 
-  insert_counter #(DW) coin_one_counter (coin_one_cnt, coin_one_in_pulse, rst_n);
-  insert_counter #(DW) coin_ten_counter (coin_ten_cnt, coin_ten_in_pulse, rst_n);
+  insert_counter #(DW) coin_ten_counter (coin_ten_cnt, coin_ten_in_pulse, rst_n & ~delayed_done_oneshot);
 
-  assign total_insert = coin_one_cnt + coin_ten_cnt * 10;
+  dffr #(DW) done_lagger (
+    .dnxt(done_oneshot),
+    .qout(delayed_done_oneshot),
+    .clk(clk),
+    .rst_n(rst_n)
+  );
+
+  assign total_insert = coin_ten_cnt * 10;
 
   diffdev #(DW) diff_device (output_ticket_count,
                             change_price,

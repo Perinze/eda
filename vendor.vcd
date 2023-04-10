@@ -1,5 +1,5 @@
 $date
-	Sat Nov 19 15:28:43 2022
+	Mon Apr 10 09:05:09 2023
 $end
 $version
 	Icarus Verilog
@@ -14,136 +14,136 @@ $var reg 1 # clk $end
 $var reg 8 $ count [7:0] $end
 $var reg 8 % dest [7:0] $end
 $var reg 1 & done $end
-$var reg 1 ' one_insert $end
-$var reg 1 ( rst_n $end
+$var reg 1 ' rst_n $end
+$var reg 8 ( src [7:0] $end
 $var reg 1 ) ten_insert $end
 $scope module v0 $end
 $var wire 8 * change_one_cnt [7:0] $end
 $var wire 1 # clk $end
-$var wire 1 ' coin_one_in_pulse $end
 $var wire 1 ) coin_ten_in_pulse $end
 $var wire 1 & done $end
 $var wire 8 + input_count [7:0] $end
 $var wire 8 , input_dest [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 - total_price [7:0] $end
-$var wire 8 . total_insert [7:0] $end
+$var wire 8 - input_src [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 8 . total_price [7:0] $end
+$var wire 8 / total_insert [7:0] $end
 $var wire 1 ! ticket_pulse $end
-$var wire 8 / output_ticket_count [7:0] $end
-$var wire 1 0 done_oneshot $end
-$var wire 8 1 coin_ten_cnt [7:0] $end
+$var wire 8 0 output_ticket_count [7:0] $end
+$var wire 1 1 done_oneshot $end
+$var wire 1 2 delayed_done_oneshot $end
+$var wire 8 3 coin_ten_cnt [7:0] $end
 $var wire 1 " coin_one_out_pulse $end
-$var wire 8 2 coin_one_cnt [7:0] $end
-$var wire 8 3 checked_input_ticket_count [7:0] $end
-$var wire 8 4 change_price [7:0] $end
+$var wire 8 4 checked_input_ticket_count [7:0] $end
+$var wire 8 5 change_price [7:0] $end
 $scope module change_one_pulser $end
 $var wire 1 # clk $end
-$var wire 8 5 in [7:0] $end
-$var wire 8 6 minus_one [7:0] $end
-$var wire 8 7 nxt_cnt [7:0] $end
+$var wire 8 6 in [7:0] $end
+$var wire 8 7 minus_one [7:0] $end
+$var wire 8 8 nxt_cnt [7:0] $end
 $var wire 1 " qout $end
-$var wire 1 ( rst_n $end
-$var wire 1 8 pos $end
-$var wire 1 0 lden $end
-$var wire 8 9 cur_cnt [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 1 9 pos $end
+$var wire 1 1 lden $end
+$var wire 8 : cur_cnt [7:0] $end
 $scope module cnt_dffr $end
 $var wire 1 # clk $end
-$var wire 8 : dnxt [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 ; qout [7:0] $end
-$var reg 8 < qout_r [7:0] $end
-$scope begin DFFR_PROC $end
-$upscope $end
-$upscope $end
-$upscope $end
-$scope module coin_one_counter $end
-$var wire 1 ' clk $end
-$var wire 8 = nxt_cnt [7:0] $end
-$var wire 8 > qout [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 ? cur_cnt [7:0] $end
-$scope module cnt_dffr $end
-$var wire 1 ' clk $end
-$var wire 8 @ dnxt [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 A qout [7:0] $end
-$var reg 8 B qout_r [7:0] $end
+$var wire 8 ; dnxt [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 8 < qout [7:0] $end
+$var reg 8 = qout_r [7:0] $end
 $scope begin DFFR_PROC $end
 $upscope $end
 $upscope $end
 $upscope $end
 $scope module coin_ten_counter $end
 $var wire 1 ) clk $end
-$var wire 8 C nxt_cnt [7:0] $end
-$var wire 8 D qout [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 E cur_cnt [7:0] $end
+$var wire 8 > nxt_cnt [7:0] $end
+$var wire 8 ? qout [7:0] $end
+$var wire 1 @ rst_n $end
+$var wire 8 A cur_cnt [7:0] $end
 $scope module cnt_dffr $end
 $var wire 1 ) clk $end
-$var wire 8 F dnxt [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 G qout [7:0] $end
-$var reg 8 H qout_r [7:0] $end
+$var wire 8 B dnxt [7:0] $end
+$var wire 1 @ rst_n $end
+$var wire 8 C qout [7:0] $end
+$var reg 8 D qout_r [7:0] $end
 $scope begin DFFR_PROC $end
 $upscope $end
 $upscope $end
 $upscope $end
 $scope module dest_device $end
-$var wire 8 I count [7:0] $end
-$var wire 8 J dest [7:0] $end
-$var wire 1 K valid $end
-$var wire 8 L total [7:0] $end
-$var wire 8 M ticket [7:0] $end
+$var wire 8 E count [7:0] $end
+$var wire 8 F dest [7:0] $end
+$var wire 8 G src [7:0] $end
+$var wire 1 H valid $end
+$var wire 6 I val_src [5:0] $end
+$var wire 6 J val_dest [5:0] $end
+$var wire 8 K total [7:0] $end
+$var wire 8 L ticket [7:0] $end
+$var wire 1 M switch $end
 $var wire 8 N price [7:0] $end
 $var wire 8 O dist [7:0] $end
-$var wire 8 P diff [7:0] $end
+$var wire 2 P dir_src [1:0] $end
+$var wire 2 Q dir_dest [1:0] $end
+$var wire 8 R diff [7:0] $end
+$var wire 8 S checked_count [7:0] $end
 $scope module abs_dist $end
-$var wire 8 Q abs [7:0] $end
-$var wire 8 R in [7:0] $end
-$var wire 1 S neg $end
-$var wire 8 T out [7:0] $end
+$var wire 8 T abs [7:0] $end
+$var wire 8 U in [7:0] $end
+$var wire 1 V neg $end
+$var wire 8 W out [7:0] $end
 $upscope $end
 $upscope $end
 $scope module diff_device $end
-$var wire 8 U change_price [7:0] $end
-$var wire 1 V enough $end
-$var wire 8 W input_count [7:0] $end
-$var wire 8 X output_count [7:0] $end
-$var wire 8 Y total_insert [7:0] $end
-$var wire 8 Z total_price [7:0] $end
-$var wire 8 [ diff [7:0] $end
+$var wire 8 X change_price [7:0] $end
+$var wire 1 Y enough $end
+$var wire 8 Z input_count [7:0] $end
+$var wire 8 [ output_count [7:0] $end
+$var wire 8 \ total_insert [7:0] $end
+$var wire 8 ] total_price [7:0] $end
+$var wire 8 ^ diff [7:0] $end
+$upscope $end
+$scope module done_lagger $end
+$var wire 1 # clk $end
+$var wire 8 _ dnxt [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 8 ` qout [7:0] $end
+$var reg 8 a qout_r [7:0] $end
+$scope begin DFFR_PROC $end
+$upscope $end
 $upscope $end
 $scope module done_shooter $end
 $var wire 1 # clk $end
-$var wire 1 \ curr $end
+$var wire 1 b curr $end
 $var wire 1 & in $end
-$var wire 1 0 out $end
-$var wire 1 ] prev $end
+$var wire 1 1 out $end
+$var wire 1 c prev $end
 $scope module oneshot_dffrs $end
-$var wire 1 \ dnxt $end
+$var wire 1 b dnxt $end
 $var wire 1 # lden $end
-$var wire 1 ] qout $end
-$var reg 1 ] qout_r $end
+$var wire 1 c qout $end
+$var reg 1 c qout_r $end
 $scope begin LTCH_PROC $end
 $upscope $end
 $upscope $end
 $upscope $end
 $scope module ticket_pulser $end
 $var wire 1 # clk $end
-$var wire 8 ^ in [7:0] $end
-$var wire 1 0 lden $end
-$var wire 8 _ minus_one [7:0] $end
-$var wire 8 ` nxt_cnt [7:0] $end
+$var wire 8 d in [7:0] $end
+$var wire 1 1 lden $end
+$var wire 8 e minus_one [7:0] $end
+$var wire 8 f nxt_cnt [7:0] $end
 $var wire 1 ! qout $end
-$var wire 1 ( rst_n $end
-$var wire 1 a pos $end
-$var wire 8 b cur_cnt [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 1 g pos $end
+$var wire 8 h cur_cnt [7:0] $end
 $scope module cnt_dffr $end
 $var wire 1 # clk $end
-$var wire 8 c dnxt [7:0] $end
-$var wire 1 ( rst_n $end
-$var wire 8 d qout [7:0] $end
-$var reg 8 e qout_r [7:0] $end
+$var wire 8 i dnxt [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 8 j qout [7:0] $end
+$var reg 8 k qout_r [7:0] $end
 $scope begin DFFR_PROC $end
 $upscope $end
 $upscope $end
@@ -153,36 +153,42 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+b0 k
+b0 j
+b0 i
+b0 h
+0g
+b0 f
 b0 e
 b0 d
-b0 c
-b0 b
-0a
+xc
+0b
+b0 a
 b0 `
 b0 _
 b0 ^
-x]
-0\
+b0 ]
+b0 \
 b0 [
 b0 Z
-b0 Y
+1Y
 b0 X
 b0 W
-1V
+0V
 b0 U
 b0 T
-0S
+b0 S
 b0 R
 b0 Q
 b0 P
 b0 O
 b110101 N
-b0 M
+0M
 b0 L
-0K
-b10000 J
+b0 K
+b0 J
 b0 I
-b0 H
+0H
 b0 G
 b0 F
 b0 E
@@ -190,52 +196,51 @@ b0 D
 b0 C
 b0 B
 b0 A
-b0 @
+0@
 b0 ?
 b0 >
 b0 =
 b0 <
 b0 ;
 b0 :
-b0 9
-08
+09
+b0 8
 b0 7
 b0 6
 b0 5
 b0 4
 b0 3
-b0 2
-b0 1
-00
+02
+01
+b0 0
 b0 /
 b0 .
 b0 -
-b10000 ,
+b0 ,
 b0 +
 b0 *
 0)
-0(
+b0 (
 0'
 0&
-b10000 %
+b0 %
 b0 $
 0#
 0"
 0!
 $end
 #500
-0]
+0c
 1#
 #1000
 0#
 #1500
 1#
 #2000
-b1 =
-b1 @
-b1 C
-b1 F
-1(
+b1 >
+b1 B
+1@
+1'
 0#
 #2500
 1#
@@ -276,281 +281,397 @@ b1 F
 #11500
 1#
 #12000
-0V
-b10 N
+0Y
+b11 N
+b110 O
+b110 W
+b110 T
+1V
 b0 *
+b0 6
 b0 5
-b0 4
-b0 U
-b1 O
-b1 T
-b1 Q
-1S
-b0 /
 b0 X
-b0 ^
-b11111010 [
-b110 -
-b110 L
-b110 Z
-b11 3
-b11 M
-b11 W
-b11111111 P
-b11111111 R
+b0 0
+b0 [
+b0 d
+b11111010 R
+b11111010 U
+b11110111 ^
+b1001 .
+b1001 K
+b1001 ]
+b11 4
+b11 L
+b11 Z
+b1 J
+b10 Q
+b111 I
+0M
+b10 P
+b11 S
 b11 $
 b11 +
-b11 I
-1K
-b1111 %
-b1111 ,
-b1111 J
+b11 E
+b10000001 %
+b10000001 ,
+b10000001 F
+1H
+b10000111 (
+b10000111 -
+b10000111 G
 0#
 #12500
 1#
 #13000
-b10 =
-b10 @
+b11 0
+b11 [
+b11 d
+b10 >
+b10 B
 b1 *
+b1 6
 b1 5
-b1 4
-b1 U
-b11111011 [
-b1 .
-b1 Y
-b1 2
-b1 >
+b1 X
+1Y
+b1 ^
+b1010 /
+b1010 \
+b1 3
 b1 ?
 b1 A
-b1 B
-1'
+b1 C
+b1 D
+1)
 0#
 #13500
 1#
 #14000
-0'
+0)
 0#
 #14500
 1#
 #15000
-b11 =
-b11 @
-b10 *
-b10 5
-b10 4
-b10 U
-b11111100 [
-b10 .
-b10 Y
-b10 2
-b10 >
-b10 ?
-b10 A
-b10 B
-1'
-0#
-#15500
-1#
-#16000
-0'
-0#
-#16500
-1#
-#17000
-b11 /
-b11 X
-b11 ^
-b10 C
-b10 F
-b110 *
-b110 5
-b110 4
-b110 U
-1V
-b110 [
-b1100 .
-b1100 Y
-b1 1
-b1 D
-b1 E
-b1 G
-b1 H
-1)
-0#
-#17500
-1#
-#18000
-0)
-0#
-#18500
-1#
-#19000
-b11 `
-b11 c
-b110 7
-b110 :
-10
-1\
+b11 f
+b11 i
+b1 8
+b1 ;
+b1 _
+11
+1b
 1&
 0#
-#19500
-b10 `
-b10 c
-b101 7
-b101 :
-b10 _
-b101 6
-00
+#15500
+b0 0
+b0 [
+b0 d
+0Y
+b0 *
+b0 6
+b0 5
+b0 X
+b11110111 ^
+b0 /
+b0 \
+b0 3
+b0 ?
+b0 A
+b0 C
+b0 D
+b0 >
+b0 B
+b10 f
+b10 i
+b0 8
+b0 ;
+0@
+b10 e
+b0 _
+01
 1!
 1"
-1a
-b11 b
-b11 d
-b11 e
-18
-b110 9
-b110 ;
-b110 <
-1]
+12
+1g
+b11 h
+b11 j
+b11 k
+19
+b1 :
+b1 <
+b1 =
+b1 `
+b1 a
+1c
+1#
+#16000
+0"
+0!
+0#
+#16500
+b1 >
+b1 B
+b1 f
+b1 i
+1@
+b1 e
+02
+b10 h
+b10 j
+b10 k
+09
+b0 :
+b0 <
+b0 =
+b0 `
+b0 a
+0"
+1!
+1#
+#17000
+0b
+0&
+0!
+0#
+#17500
+b0 f
+b0 i
+b0 e
+b1 h
+b1 j
+b1 k
+0c
+1!
+1#
+#18000
+0!
+0#
+#18500
+0g
+b0 h
+b0 j
+b0 k
+0!
+1#
+#19000
+0#
+#19500
 1#
 #20000
-0"
-0!
 0#
 #20500
-b1 `
-b1 c
-b100 7
-b100 :
-b1 _
-b100 6
-b10 b
-b10 d
-b10 e
-b101 9
-b101 ;
-b101 <
-1"
-1!
 1#
 #21000
-0\
-0&
-0"
-0!
 0#
 #21500
-b0 `
-b0 c
-b11 7
-b11 :
-b0 _
-b11 6
-b1 b
-b1 d
-b1 e
-b100 9
-b100 ;
-b100 <
-0]
-1"
-1!
 1#
 #22000
-0"
-0!
 0#
 #22500
-b10 7
-b10 :
-b10 6
-0a
-b0 b
-b0 d
-b0 e
-b11 9
-b11 ;
-b11 <
-1"
-0!
 1#
 #23000
-0"
 0#
 #23500
-b1 7
-b1 :
-b1 6
-b10 9
-b10 ;
-b10 <
-1"
 1#
 #24000
-0"
 0#
 #24500
-b0 7
-b0 :
-b0 6
-b1 9
-b1 ;
-b1 <
-1"
 1#
 #25000
-0"
 0#
 #25500
-08
-b0 9
-b0 ;
-b0 <
-0"
 1#
 #26000
 0#
 #26500
 1#
 #27000
+b0 *
+b0 6
+b0 5
+b0 X
+b0 0
+b0 [
+b0 d
+0Y
+b101 N
+0V
+b10011 O
+b10011 W
+b10011 T
+b10011 R
+b10011 U
+b11101100 ^
+b10100 .
+b10100 K
+b10100 ]
+b100 4
+b100 L
+b100 Z
+b10001 J
+1M
+b11 Q
+b10 I
+b100 S
+b101 $
+b101 +
+b101 E
+b11010001 %
+b11010001 ,
+b11010001 F
+b10000010 (
+b10000010 -
+b10000010 G
 0#
 #27500
 1#
 #28000
+b10 >
+b10 B
+b1010 *
+b1010 6
+b1010 5
+b1010 X
+b11110110 ^
+b1010 /
+b1010 \
+b1 3
+b1 ?
+b1 A
+b1 C
+b1 D
+1)
 0#
 #28500
 1#
 #29000
+0)
 0#
 #29500
 1#
 #30000
+b100 0
+b100 [
+b100 d
+b11 >
+b11 B
+b0 *
+b0 6
+b0 5
+b0 X
+1Y
+b0 ^
+b10100 /
+b10100 \
+b10 3
+b10 ?
+b10 A
+b10 C
+b10 D
+1)
 0#
 #30500
 1#
 #31000
+0)
 0#
 #31500
 1#
 #32000
+b100 f
+b100 i
+b1 _
+11
+1b
+1&
 0#
 #32500
+b0 0
+b0 [
+b0 d
+0Y
+b0 *
+b0 6
+b0 5
+b0 X
+b11101100 ^
+b0 /
+b0 \
+b0 3
+b0 ?
+b0 A
+b0 C
+b0 D
+b0 >
+b0 B
+b11 f
+b11 i
+0@
+b11 e
+b0 _
+01
+1!
+12
+1g
+b100 h
+b100 j
+b100 k
+b1 `
+b1 a
+1c
 1#
 #33000
+0!
 0#
 #33500
+b1 >
+b1 B
+b10 f
+b10 i
+1@
+b10 e
+02
+b11 h
+b11 j
+b11 k
+b0 `
+b0 a
+1!
 1#
 #34000
+0b
+0&
+0!
 0#
 #34500
+b1 f
+b1 i
+b1 e
+b10 h
+b10 j
+b10 k
+0c
+1!
 1#
 #35000
+0!
 0#
 #35500
+b0 f
+b0 i
+b0 e
+b1 h
+b1 j
+b1 k
+1!
 1#
 #36000
+0!
 0#
 #36500
+0g
+b0 h
+b0 j
+b0 k
+0!
 1#
 #37000
 0#
@@ -569,4 +690,502 @@ b0 <
 #40500
 1#
 #41000
+0#
+#41500
+1#
+#42000
+0#
+#42500
+1#
+#43000
+0#
+#43500
+1#
+#44000
+b10000 O
+b10000 W
+b10000 T
+b10000 R
+b10000 U
+b11110001 ^
+b1111 .
+b1111 K
+b1111 ]
+b11 4
+b11 L
+b11 Z
+b1011 J
+b10 Q
+b101 I
+b0 P
+b11 S
+b11 $
+b11 +
+b11 E
+b10001011 %
+b10001011 ,
+b10001011 F
+b101 (
+b101 -
+b101 G
+0#
+#44500
+1#
+#45000
+b10 >
+b10 B
+b1010 *
+b1010 6
+b1010 5
+b1010 X
+b11111011 ^
+b1010 /
+b1010 \
+b1 3
+b1 ?
+b1 A
+b1 C
+b1 D
+1)
+0#
+#45500
+1#
+#46000
+0)
+0#
+#46500
+1#
+#47000
+b11 0
+b11 [
+b11 d
+b11 >
+b11 B
+b101 *
+b101 6
+b101 5
+b101 X
+1Y
+b101 ^
+b10100 /
+b10100 \
+b10 3
+b10 ?
+b10 A
+b10 C
+b10 D
+1)
+0#
+#47500
+1#
+#48000
+0)
+0#
+#48500
+1#
+#49000
+b11 f
+b11 i
+b101 8
+b101 ;
+b1 _
+11
+1b
+1&
+0#
+#49500
+b0 0
+b0 [
+b0 d
+0Y
+b0 *
+b0 6
+b0 5
+b0 X
+b11110001 ^
+b0 /
+b0 \
+b0 3
+b0 ?
+b0 A
+b0 C
+b0 D
+b0 >
+b0 B
+b10 f
+b10 i
+b100 8
+b100 ;
+0@
+b10 e
+b100 7
+b0 _
+01
+1!
+1"
+12
+1g
+b11 h
+b11 j
+b11 k
+19
+b101 :
+b101 <
+b101 =
+b1 `
+b1 a
+1c
+1#
+#50000
+0"
+0!
+0#
+#50500
+b1 >
+b1 B
+b1 f
+b1 i
+b11 8
+b11 ;
+1@
+b1 e
+b11 7
+02
+b10 h
+b10 j
+b10 k
+b100 :
+b100 <
+b100 =
+b0 `
+b0 a
+1"
+1!
+1#
+#51000
+0b
+0&
+0"
+0!
+0#
+#51500
+b0 f
+b0 i
+b10 8
+b10 ;
+b0 e
+b10 7
+b1 h
+b1 j
+b1 k
+b11 :
+b11 <
+b11 =
+0c
+1"
+1!
+1#
+#52000
+0"
+0!
+0#
+#52500
+b1 8
+b1 ;
+b1 7
+0g
+b0 h
+b0 j
+b0 k
+b10 :
+b10 <
+b10 =
+1"
+0!
+1#
+#53000
+0"
+0#
+#53500
+b0 8
+b0 ;
+b0 7
+b1 :
+b1 <
+b1 =
+1"
+1#
+#54000
+0"
+0#
+#54500
+09
+b0 :
+b0 <
+b0 =
+0"
+1#
+#55000
+0#
+#55500
+1#
+#56000
+0#
+#56500
+1#
+#57000
+0#
+#57500
+1#
+#58000
+0#
+#58500
+1#
+#59000
+0#
+#59500
+1#
+#60000
+0#
+#60500
+1#
+#61000
+0#
+#61500
+1#
+#62000
+b10 >
+b10 B
+b1010 *
+b1010 6
+b1010 5
+b1010 X
+b11111011 ^
+b1010 /
+b1010 \
+b1 3
+b1 ?
+b1 A
+b1 C
+b1 D
+1)
+0#
+#62500
+1#
+#63000
+0)
+0#
+#63500
+1#
+#64000
+b1010 8
+b1010 ;
+b1 _
+11
+1b
+1&
+0#
+#64500
+b0 *
+b0 6
+b0 5
+b0 X
+b11110001 ^
+b0 /
+b0 \
+b0 3
+b0 ?
+b0 A
+b0 C
+b0 D
+b0 >
+b0 B
+b1001 8
+b1001 ;
+0@
+b1001 7
+b0 _
+01
+1"
+12
+19
+b1010 :
+b1010 <
+b1010 =
+b1 `
+b1 a
+1c
+1#
+#65000
+0"
+0#
+#65500
+b1 >
+b1 B
+b1000 8
+b1000 ;
+1@
+b1000 7
+02
+b1001 :
+b1001 <
+b1001 =
+b0 `
+b0 a
+1"
+1#
+#66000
+0b
+0&
+0"
+0#
+#66500
+b111 8
+b111 ;
+b111 7
+b1000 :
+b1000 <
+b1000 =
+0c
+1"
+1#
+#67000
+0"
+0#
+#67500
+b110 8
+b110 ;
+b110 7
+b111 :
+b111 <
+b111 =
+1"
+1#
+#68000
+0"
+0#
+#68500
+b101 8
+b101 ;
+b101 7
+b110 :
+b110 <
+b110 =
+1"
+1#
+#69000
+0"
+0#
+#69500
+b100 8
+b100 ;
+b100 7
+b101 :
+b101 <
+b101 =
+1"
+1#
+#70000
+0"
+0#
+#70500
+b11 8
+b11 ;
+b11 7
+b100 :
+b100 <
+b100 =
+1"
+1#
+#71000
+0"
+0#
+#71500
+b10 8
+b10 ;
+b10 7
+b11 :
+b11 <
+b11 =
+1"
+1#
+#72000
+0"
+0#
+#72500
+b1 8
+b1 ;
+b1 7
+b10 :
+b10 <
+b10 =
+1"
+1#
+#73000
+0"
+0#
+#73500
+b0 8
+b0 ;
+b0 7
+b1 :
+b1 <
+b1 =
+1"
+1#
+#74000
+0"
+0#
+#74500
+09
+b0 :
+b0 <
+b0 =
+0"
+1#
+#75000
+0#
+#75500
+1#
+#76000
+0#
+#76500
+1#
+#77000
+0#
+#77500
+1#
+#78000
+0#
+#78500
+1#
+#79000
+0#
+#79500
+1#
+#80000
+0#
+#80500
+1#
+#81000
+0#
+#81500
+1#
+#82000
+0#
+#82500
+1#
+#83000
+0#
+#83500
+1#
+#84000
+0#
+#84500
+1#
+#85000
+0#
+#85500
+1#
+#86000
 0#

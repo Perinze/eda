@@ -5,9 +5,9 @@ wire ticket;
 wire one_output;
 wire ten_output;
 
+reg [7:0] src;
 reg [7:0] dest;
 reg [7:0] count;
-reg one_insert;
 reg ten_insert;
 reg done;
 
@@ -16,9 +16,9 @@ reg rst_n;
 
 vendor #(8, 16) v0 (ticket,
                     one_output,
+                    src,
                     dest,
                     count,
-                    one_insert,
                     ten_insert,
                     done,
                     clk,
@@ -36,9 +36,9 @@ initial begin
     // startup
 
     // reset input
-    dest <= 16;
+    src <= 0;
+    dest <= 0;
     count <= 0;
-    one_insert <= 0;
     ten_insert <= 0;
     done <= 0;
 
@@ -53,14 +53,42 @@ initial begin
     // work
 
     #(10)
-    dest <= 15; // price 2/ticket
-    count <= 3; // total 6
-    #(1) one_insert <= 1;
-    #(1) one_insert <= 0;
-    #(1) one_insert <= 1;
-    #(1) one_insert <= 0;
+    src <=  8'b10000111;
+    dest <= 8'b10000001; // price 3/ticket
+    count <= 3; // total 9
     #(1) ten_insert <= 1;
-    #(1) ten_insert <= 0; // insert 12
+    #(1) ten_insert <= 0; // insert 10, change 1
+    #(1) done <= 1;
+    #(2) done <= 0;
+
+    #(10)
+    src <=  8'b10000010;
+    dest <= 8'b11010001; // price 5/ticket
+    count <= 5; // total 20
+    #(1) ten_insert <= 1;
+    #(1) ten_insert <= 0;
+    #(1) ten_insert <= 1;
+    #(1) ten_insert <= 0; // insert 20, change 0
+    #(1) done <= 1;
+    #(2) done <= 0;
+
+    #(10)
+    src <=  8'b00000101;
+    dest <= 8'b10001011; // price 5/ticket
+    count <= 3; // total 15
+    #(1) ten_insert <= 1;
+    #(1) ten_insert <= 0;
+    #(1) ten_insert <= 1;
+    #(1) ten_insert <= 0; // insert 20, change 5
+    #(1) done <= 1;
+    #(2) done <= 0;
+
+    #(10)
+    src <=  8'b00000101;
+    dest <= 8'b10001011; // price 5/ticket
+    count <= 3; // total 15
+    #(1) ten_insert <= 1;
+    #(1) ten_insert <= 0; // insert 10, no ticket
     #(1) done <= 1;
     #(2) done <= 0;
 
